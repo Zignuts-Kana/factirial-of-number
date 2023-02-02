@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practices-2</title>
+  </head>
+  <body>
+    <h2>Find a factorial ! for any number</h2>
+    <form>
+      <lable name="number">Give A Number :</lable>
+      <input type="number" id="inputNumber" />
+    </form>
+
+    <button name="print" id="buttonPrint" onclick="onClickFunction()">
+      Factorial
+    </button>
+
+    <div id="body" style="position: absolute; top:125px;"></div>
+
+    <script>
+      const body = document.getElementById('body');
+      function onClickFunction() {
+        const inputNumber = document.getElementById('inputNumber').value;
+        let valueOfNumber = 1;
+
+        for (let index = inputNumber; index > 0; index--) {
+          valueOfNumber = index*valueOfNumber;
+        }
+        body.innerHTML = valueOfNumber;
+      }
+    </script>
+  </body>
+</html>
